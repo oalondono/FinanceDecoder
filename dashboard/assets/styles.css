@@ -1,0 +1,12 @@
+body { font-family:'Open Sans', sans-serif; background:#fafafa; margin:0; }
+.main-title { color:#002B45; padding:1rem 2rem; margin:0; }
+.filter-bar { display:flex; gap:1rem; padding:0 2rem 1rem; flex-wrap:wrap; }
+.state-dd, .city-dd { min-width:260px; flex:1 1 260px; }
+.indicator-tabs > .tab { font-weight:600; }
+.metric-page { display:flex; align-items:center; padding:1rem 2rem; gap:2rem; }
+.graph-wrapper { flex:1 1 75%; }
+.arrow-wrapper { flex:0 0 16%; max-width:220px; }
+.spectrum-vert { display:flex; flex-direction:column; align-items:center; gap:0.4rem; font-size:0.85rem; text-align:center; }
+.bar-vert { width:6px; height:220px; border-radius:3px; background:linear-gradient(to top, #BF1E2E, #2AA876); }
+.invert .bar-vert { background:linear-gradient(to top, #2AA876, #BF1E2E); }
+.top-label, .bottom-label { white-space:nowrap; line-height:1.1; }
