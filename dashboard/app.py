@@ -44,7 +44,7 @@ def serve_layout():
         ]
     )
 
-app = Dash(__name__, use_pages=True, suppress_callback_exceptions=True)
+app = dash(__name__, use_pages=True, suppress_callback_exceptions=True)
 app.layout = html.Div([dash.page_container])
 server = app.server
 
@@ -215,8 +215,6 @@ def render_page(indicator, filters):
         ],
         className="metric-page",
     )
-
-
 
 
 if __name__ == "__main__":
