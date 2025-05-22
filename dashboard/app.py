@@ -205,25 +205,6 @@ def render_page(indicator, filters):
         className="metric-page",
     )
 
-
-external_stylesheets = [
-    "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap",
-]
-
-app = dash.Dash(
-    __name__,
-    suppress_callback_exceptions=True,
-    external_stylesheets=external_stylesheets,
-    title="Finance Decoder Dashboard",
-)
-server = app.server
-
-app.layout = html.Div([
-    dcc.Store(id="filters-store"),
-    html.H1("Finance Decoder Dashboard", className="main-title"),
-    ...  # filter bar, tabs, page-content
-])
-
 # callbacks …
 if __name__ == "__main__":
     app.run_server(debug=True, port=8050)
