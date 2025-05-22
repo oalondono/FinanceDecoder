@@ -36,17 +36,6 @@ from dash import Input, Output, State, dcc, html
 import pandas as pd
 import plotly.express as px
 
-def serve_layout():
-    return html.Div(
-        [
-            html.H1("Finance Decoder"),
-            html.Div(id="page-content"),
-        ]
-    )
-
-app = dash(__name__, use_pages=True, suppress_callback_exceptions=True)
-app.layout = html.Div([dash.page_container])
-server = app.server
 
 # -------------------------------------------------------------------
 # Locate CSV (env‑var → data/ → current folder)
@@ -217,5 +206,25 @@ def render_page(indicator, filters):
     )
 
 
+external_stylesheets = [
+    "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap",
+]
+
+app = dash.Dash(
+    __name__,
+    use_pages=True,
+    suppress_callback_exceptions=True,
+    external_stylesheets=external_stylesheets,
+    title="Finance Decoder Dashboard",
+)
+server = app.server
+
+app.layout = html.Div([
+    dcc.Store(id="filters-store"),
+    html.H1("Finance Decoder Dashboard", className="main-title"),
+    ...  # filter bar, tabs, page-content
+])
+
+# callbacks …
 if __name__ == "__main__":
     app.run_server(debug=True, port=8050)
