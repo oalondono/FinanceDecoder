@@ -35,7 +35,7 @@ import dash
 from dash import Input, Output, State, dcc, html
 import pandas as pd
 import plotly.express as px
-git
+
 # -------------------------------------------------------------------
 # Locate CSV (env‑var → data/ → current folder)
 # -------------------------------------------------------------------
