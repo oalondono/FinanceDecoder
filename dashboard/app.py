@@ -212,7 +212,6 @@ external_stylesheets = [
 
 app = dash.Dash(
     __name__,
-    use_pages=True,
     suppress_callback_exceptions=True,
     external_stylesheets=external_stylesheets,
     title="Finance Decoder Dashboard",
